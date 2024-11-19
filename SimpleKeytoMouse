@@ -1,0 +1,26 @@
+import os
+import keyboard as kb
+import time
+import pyautogui
+import pyautogui
+def KeyCheck(Key):
+    if kb.is_pressed(Key) == True:
+        return(True)
+
+
+# Documentation
+# https://github.com/boppreh/keyboard?tab=readme-ov-file#api
+Speed = 25
+
+while True:
+    if KeyCheck("up"):
+        pyautogui.moveRel(0, -Speed)
+    
+    if KeyCheck("down"):
+        pyautogui.moveRel(0, Speed)
+        
+    if KeyCheck("right"):
+        pyautogui.moveRel(Speed, 0)
+        
+    if KeyCheck("left"):
+        pyautogui.moveRel(-Speed, 0)
